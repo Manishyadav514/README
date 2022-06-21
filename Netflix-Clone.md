@@ -9,6 +9,30 @@
 
 - [Manish Yadav](#)
 
+## ⮚	Hosting on Firebase
+1.	npm install -g firebase-tools
+a.	To download and install the Firebase CLI run the following command:
+2.	firebase login
+a.	open a browser to login
+3.	firebase init
+a.	initialize the project
+4.	Hosting: Configure files for Firebase Hosting and (optionally) set up GitHub Action deploys
+5.	Please select an option: Use an existing project
+6.	Select a default Firebase project for this directory: 
+7.	What do you want to use as your public directory? (public) build
+8.	Configure as a single-page app (rewrite all urls to /index.html)? Yes
+9.	Set up automatic builds and deploys with GitHub? Yes
+10.	For which GitHub repository would you like to set up a GitHub workflow? (Format: user/repository) Manishyadav514/<AppName>
+a.	Secrete Key: https://github.com/Manishyadav514/React-Website-Netflix-Clone/settings/secrets/actions
+11.	Set up the workflow to run a build script before every deploy? Yes
+12.	What script should be run before every deploy? npm ci && npm run build
+13.	Set up automatic deployment to your site's live channel when a PR is merged? Yes
+14.	What is the name of the GitHub branch associated with your site's live channel? Master
+15.	npm run build
+16.	firebase deploy
+a.	https://react-netflix-clone-6fa02.web.app/
+
+
 ## ⮚	Netflix.js
 
 ```javascript
