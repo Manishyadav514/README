@@ -3129,3 +3129,291 @@ export default Sizes;
 ]
 ```
 
+## ⮚	AwarenessHaal styled-component===react
+```javascript   
+import React from "react";
+import {Header1} from "./components/Header.js";
+import HomeCard from "./components/HomeCard.js";
+import {homeObjOne, homeObjTwo, homeObjThree} from './components/HomeCardData.js';
+import SliderBackground from "./components/SliderBackground.js"
+const Portfolio = () => {
+  return (
+    <div>
+      <Header1 />
+      <SliderBackground />
+      <HomeCard {...homeObjOne}/>
+      <HomeCard {...homeObjTwo}/>
+      <HomeCard {...homeObjThree}/>
+
+    </div>
+  );
+};
+
+export default Portfolio;
+
+
+
+
+
+
+
+import React from "react";
+import "../Portfolio.css";
+import "./SliderBackground.css";
+import Video from "../media/bg-video.mp4";
+
+const DownloadedHeader = () => {
+  return (
+    <div>
+      <section className="video_container">
+        <video
+          className="active"
+          src={Video}
+          autoPlay
+          muted
+          loop
+        ></video>
+        <video className="video_slide" src={Video} autoPlay muted loop></video>
+        <video className="video_slide" src={Video} autoPlay muted loop></video>
+        <video className="video_slide" src={Video} autoPlay muted loop></video>
+        <video className="video_slide" src={Video} autoPlay muted loop></video>
+        <div className="content active">
+          <h1>
+            Manish <span>Yadav</span>
+          </h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+          <a href="/">Read More</a>
+        </div>
+        <div className="content">
+          <h1>Camping. Enjoy</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+          <a href="/">Read More</a>
+        </div>
+        <div className="content">
+          <h1>
+            Adventures.<span>Off Road</span>
+          </h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+          <a href="/">Read More</a>
+        </div>
+        <div className="content">
+          <h1>
+            Road Trip.<span>Together</span>
+          </h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+          <a href="/">Read More</a>
+        </div>
+        <div className="content">
+          <h1>
+            Feel Nature.<span>Relax</span>
+          </h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+          <a href="/">Read More</a>
+        </div>
+        <div className="media_icons">
+          {/* <a href="/">
+            <BsFacebook/>
+          </a> */}
+        </div>
+        <div className="video_navigation">
+          <div className="video_btn active"></div>
+          <div className="video_btn"></div>
+          <div className="video_btn"></div>
+          <div className="video_btn"></div>
+          <div className="video_btn"></div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default DownloadedHeader;
+
+
+
+
+
+// can't use svg at the place of img
+import camera1 from "../media/camera1.svg";
+
+export const homeObjOne = {
+    id: 'about',
+    lightBg: false,
+    lightText: false,
+    lightTextDesc: true,
+    topLine: 'Click to CheckOut!',
+    title: 'Photography/Video',
+    description: 'Collection of my photos, vector, posters, videos and many more',
+    buttonLabel: 'View More',
+    buttonDirect:'/about',
+    imgStart: false,
+    imageSrc: require('../media/photography.jpg'),
+    altText: 'Car',
+    dark: true,
+    dark2: true,
+    primary: true,
+    darkText: false,
+    svgSrc: camera1
+}
+export const homeObjTwo = {
+    id: 'about',
+    lightBg: true,
+    lightText: false,
+    lightTextDesc: true,
+    topLine: 'Click to CheckOut!',
+    title: 'Alfaaz-e-Sukhan',
+    description: 'Collection of my poems',
+    buttonLabel: 'View More',
+    buttonDirect:'/about',
+    imgStart: true,
+    imageSrc: require('../media/photography.jpg'),
+    altText: 'Car',
+    dark: true,
+    dark2: true,
+    primary: true,
+    darkText: false,
+    svgSrc: camera1
+}
+export const homeObjThree = {
+    id: 'about',
+    lightBg: false,
+    lightText: false,
+    lightTextDesc: true,
+    topLine: 'Click to CheckOut!',
+    title: 'Photography/Video',
+    description: 'Collection of my photos, vector, posters, videos and many more',
+    buttonLabel: 'View More',
+    buttonDirect:'/about',
+    imgStart: false,
+    imageSrc: require('../media/photography.jpg'),
+    altText: 'Car',
+    dark: true,
+    dark2: true,
+    primary: true,
+    darkText: false,
+    svgSrc: camera1
+}
+
+
+
+import React from "react";
+import "./HomeCard.css";
+
+const HomeCard = (props) => {
+  return (
+    <div className="card">
+      <div className="card_row">
+        <div className="card_col1">
+          <div className="card_text">
+            <div className="card_title">{props.topLine}</div>
+            <div className="card_heading">{props.title}</div>
+            <div className="card_subtitle">{props.description}</div>
+            <div className="card_button">
+              <a href="/">Button</a>
+            </div>
+          </div>
+        </div>
+        <div className="card_col2">
+          <div className="image_box">
+            <div className="image_inner">
+              <img width="100%" src={props.svgSrc} alt={props.altbox}></img>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default HomeCard;
+
+
+
+import "./Header.css";
+import React, { useState } from "react";
+import { FaBars, FaWindowClose } from "react-icons/fa";
+
+export const Header1 = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const toggle = () => {
+    setIsOpen(!isOpen);
+  };
+
+  
+  return (
+    <div className="navbar">
+      <a href="/" className="navbar_title">
+        AwarenessHall
+      </a>
+      <div className="navbar_toggle" onClick={toggle}>
+        <FaBars color="white"/>
+      </div>
+      <div className="navbar_links">
+        <div className="navbar_link">
+          <a href="/">Home</a>
+          <a href="/">About</a>
+          <a href="/">Explore</a>
+          <a href="/">Gallery</a>
+          <a href="/">Contact</a>
+        </div>
+      </div>
+      <div className={isOpen ? "navbar_sidebar" : "navbar_sidebar_open"}>
+        <div className="navbar_sidebar_toggle" onClick={toggle}>
+          <FaWindowClose color="#fff" />
+        </div>
+        <div className="navbar_sidebar_links" onClick={toggle}>
+          <a href="/">About</a>
+          <a href="/">Photo</a>
+          <a href="/">About</a>
+        </div>
+        <div className="navbar_sidebar_button">
+          <a href="/">SignIn</a>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+
+
+```
